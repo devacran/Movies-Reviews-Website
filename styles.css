@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2:800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.main-container{
+    display:grid;
+    grid-template-columns: 90px auto;
+    height: 93vh;
+    width: 100%;
+    padding-bottom: 17px;
+
+}
+.main-content{
+    display: grid;
+    grid-template-columns: auto;
+    overflow: auto;
+    gap: 40px 0px;
+    margin-top: 20px;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    width: 100%;
+
+}
+.content{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(200px, auto));
+    grid-template-rows: 35px auto;
+    gap: 0px 80px;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: rgb(255,180,159);
+    background: linear-gradient(90deg, rgba(255,180,159,1) 0%, rgba(255,147,104,1) 100%);
+    display: flex;
+    flex-flow: column;
+  }
+  .navbar span{
+    padding: 20px 5px;
+  }
+  .navbar a{
+      color:white;
+      text-decoration: none;
+  }
+.navbar span:last-child{
+    margin-top: auto;
+    padding-bottom: 30px;
+}
+.search-input{
+    border-radius: 5px;
+    border: solid whitesmoke;
+    padding: 5px;
+    min-width: 300px;
+
+}
+.search-input:focus{
+outline:none;
+}
+
+.logo img{
+    width: 30px;
+}
+.logo, .user{
+    align-items: center;
+    display: flex;
+}
+.user{
+    width: 160px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.logo{
+    width: 140px;
+    justify-content: space-between;
+    font-family: 'Baloo Da 2', cursive;
+    color: #6b593f
+}
+.user img{
+    border-radius: 50%;
+    width: 30px;
+}
+.movie-post-image img{
+    max-width: 100%;
+}
+.movie-post{
+    position: relative;
+}
+
+.post-overlay{
+    background: rgba(255, 147, 104, 0.83);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.post-overlay h1{
+    font-size: 18px;
+    margin: 0;
+  }
+  .movie-post:hover .post-overlay{
+      display:flex;
+      flex-direction: column;
+  }
+.title{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+header{
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px 0 #d6d6d6;
+    height: 28px;
+}
+@media screen and (max-width: 670px){
+    .search input{
+        width:auto;
+    
+    }
+    .user span:first-child{
+        display:none;
+    }
+    .user{
+        width: auto;
+    }
+    .logo{
+        justify-content: flex-end;
+    }
+}
